@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-06-06 14:58:04 / Modified: 14:59:56" itemprop="dateCreated datePublished" datetime="2019-06-06T14:58:04+08:00">2019-06-06</time>
+              <time title="Created: 2019-06-06 14:58:04 / Modified: 15:01:49" itemprop="dateCreated datePublished" datetime="2019-06-06T14:58:04+08:00">2019-06-06</time>
             
 
             
@@ -374,7 +374,10 @@
           
             <p>1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
 <blockquote>
-<p>:global address [/ip address get [find interface=”pppoe-out1”] address]<br>:global address1 [ :put [:pick $address 0 [:find $address “/“]]]<br>/tool fetch keep-result=no url=”<a href="https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;" target="_blank" rel="noopener">https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</a><br>:log info “DDNS Address is $address1”</p>
+<p>:global address [/ip address get [find interface=”pppoe-out1”] address]</p>
+<p>:global address1 [ :put [:pick $address 0 [:find $address “/“]]]</p>
+<p>/tool fetch keep-result=no url=”<a href="https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;" target="_blank" rel="noopener">https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</a></p>
+<p>:log info “DDNS Address is $address1”</p>
 </blockquote>
 
           
