@@ -74,16 +74,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="百米路由2（HQ55）U-boot启动流程"><a href="#百米路由2（HQ55）U-boot启动流程" class="headerlink" title="百米路由2（HQ55）U-boot启动流程"></a>百米路由2（HQ55）U-boot启动流程</h1><blockquote>
-<p>百米路由2<br>0x000000000000-0x000000040000 : “u-boot”<br>0x000000040000-0x000000050000 : “u-boot-env”<br>0x000000050000-0x000000690000 : “rootfs”<br>mtd: partition “rootfs” set to be root filesystem<br>split_squashfs: no squashfs found in “ath-nor0”<br>0x000000690000-0x0000007d0000 : “kernel”<br>0x0000007d0000-0x0000007e0000 : “cfg”<br>0x0000007e0000-0x0000007f0000 : “oem”<br>0x0000007f0000-0x000000800000 : “ART”</p>
-</blockquote>
-<p>Kernel command line: board=bxo2000n_2s_lite console=ttyS0,115200 root=31:02 rootfstype=squashfs,jffs2 init=/sbin/init mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART) mem=64M</p>
-<p>arg 1: board=bxo2000n_2s_lite<br>arg 2: console=ttyS0,115200<br>arg 3: root=31:02<br>arg 4: rootfstype=squashfs,jffs2<br>arg 5: init=/sbin/init<br>arg 6: mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART)<br>arg 7: mem=64M<br>CPU revision is: 0001974c (MIPS 74Kc)<br>ath_sys_frequency: cpu srif ddr srif cpu 535 ddr 400 ahb 200</p>
+        <h1 id="百米路由2（HQ55）U-boot启动流程"><a href="#百米路由2（HQ55）U-boot启动流程" class="headerlink" title="百米路由2（HQ55）U-boot启动流程"></a>百米路由2（HQ55）U-boot启动流程</h1><p>0x000000000000-0x000000040000 : “u-boot”<br>0x000000040000-0x000000050000 : “u-boot-env”<br>0x000000050000-0x000000690000 : “rootfs”<br>mtd: partition “rootfs” set to be root filesystem<br>split_squashfs: no squashfs found in “ath-nor0”<br>0x000000690000-0x0000007d0000 : “kernel”<br>0x0000007d0000-0x0000007e0000 : “cfg”<br>0x0000007e0000-0x0000007f0000 : “oem”<br>0x0000007f0000-0x000000800000 : “ART”<br>Kernel command line: board=bxo2000n_2s_lite console=ttyS0,115200 root=31:02 rootfstype=squashfs,jffs2 init=/sbin/init mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART) mem=64M<br>arg 1: board=bxo2000n_2s_lite<br>arg 2: console=ttyS0,115200<br>arg 3: root=31:02<br>arg 4: rootfstype=squashfs,jffs2<br>arg 5: init=/sbin/init<br>arg 6: mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART)<br>arg 7: mem=64M<br>CPU revision is: 0001974c (MIPS 74Kc)<br>ath_sys_frequency: cpu srif ddr srif cpu 535 ddr 400 ahb 200</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/06/百米路由2 u-boot驱动流程/" data-id="cjwk94q8b0001lje8sojnhr72" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/06/百米路由2 u-boot驱动流程/" data-id="cjwkacd360001w8fy4xt1at2y" class="article-share-link">Share</a>
       
       
     </footer>
