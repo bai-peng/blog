@@ -62,6 +62,37 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-RouterOS  freedns 动态域名更新" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/06/RouterOS  freedns 动态域名更新/" class="article-date">
+  <time datetime="2019-06-06T06:38:40.738Z" itemprop="datePublished">2019-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p># 
+1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
+<blockquote>
+<p>:global address [/ip address get [find interface=”pppoe-out1”] address]<br>:global address1 [ :put [:pick $address 0 [:find $address “/“]]]<br>/tool fetch keep-result=no url=”<a href="https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;" target="_blank" rel="noopener">https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</a><br>:log info “DDNS Address is $address1”</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/06/RouterOS  freedns 动态域名更新/" data-id="cjwkajzra0001zpfyqa0era5y" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-百米路由2 u-boot驱动流程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/06/百米路由2 u-boot驱动流程/" class="article-date">
@@ -79,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/06/百米路由2 u-boot驱动流程/" data-id="cjwkacd360001w8fy4xt1at2y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/06/百米路由2 u-boot驱动流程/" data-id="cjwkajzre0002zpfysvqlq8f2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -118,6 +149,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/06/06/RouterOS  freedns 动态域名更新/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2019/06/06/百米路由2 u-boot驱动流程/">(no title)</a>

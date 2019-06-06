@@ -5,15 +5,19 @@
   
 
   
-  <title>Archives: 2019 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="#  1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.2.在RouterOS上调用两个变量,address 和 address13.通过 fetch 进行更新  :global address [/ip address get [find interface=”pppoe-out1”] address]:global address1 [ :put [:pick $">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/06/06/RouterOS  freedns 动态域名更新/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#  1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.2.在RouterOS上调用两个变量,address 和 address13.通过 fetch 进行更新  :global address [/ip address get [find interface=”pppoe-out1”] address]:global address1 [ :put [:pick $">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-06T06:39:54.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="#  1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.2.在RouterOS上调用两个变量,address 和 address13.通过 fetch 进行更新  :global address [/ip address get [find interface=”pppoe-out1”] address]:global address1 [ :put [:pick $">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,47 +64,46 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/06/06/RouterOS  freedns 动态域名更新/" class="archive-article-date">
-  <time datetime="2019-06-06T06:38:40.738Z" itemprop="datePublished">Jun 6</time>
+        <section id="main"><article id="post-RouterOS  freedns 动态域名更新" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/06/RouterOS  freedns 动态域名更新/" class="article-date">
+  <time datetime="2019-06-06T06:38:40.738Z" itemprop="datePublished">2019-06-06</time>
 </a>
-      
-    </header>
+    
   </div>
-</article>
-  
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/06/06/百米路由2 u-boot驱动流程/" class="archive-article-date">
-  <time datetime="2019-06-06T05:50:39.623Z" itemprop="datePublished">Jun 6</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        <p># 
+1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
+<blockquote>
+<p>:global address [/ip address get [find interface=”pppoe-out1”] address]<br>:global address1 [ :put [:pick $address 0 [:find $address “/“]]]<br>/tool fetch keep-result=no url=”<a href="https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;" target="_blank" rel="noopener">https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</a><br>:log info “DDNS Address is $address1”</p>
+</blockquote>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/06/RouterOS  freedns 动态域名更新/" data-id="cjwkajzra0001zpfyqa0era5y" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/06/百米路由2 u-boot驱动流程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
