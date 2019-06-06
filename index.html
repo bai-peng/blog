@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/RouterOS-freedns-动态域名更新/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/百米路由2（HQ55）U-boot启动流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -306,7 +306,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/06/RouterOS-freedns-动态域名更新/" class="post-title-link" itemprop="url">RouterOS  freedns 动态域名更新</a>
+                <a href="/2019/06/06/百米路由2（HQ55）U-boot启动流程/" class="post-title-link" itemprop="url">百米路由2（HQ55）U-boot启动流程</a>
               
             
           </h1>
@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-06-06 14:58:04 / Modified: 15:03:26" itemprop="dateCreated datePublished" datetime="2019-06-06T14:58:04+08:00">2019-06-06</time>
+              <time title="Created: 2019-06-06 15:21:02 / Modified: 15:21:30" itemprop="dateCreated datePublished" datetime="2019-06-06T15:21:02+08:00">2019-06-06</time>
             
 
             
@@ -372,14 +372,7 @@
       
         
           
-            <p>1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
-<hr>
-<blockquote>
-<p>:global address [/ip address get [find interface=”pppoe-out1”] address]</p>
-<p>:global address1 [ :put [:pick $address 0 [:find $address “/“]]]</p>
-<p>/tool fetch keep-result=no url=”<a href="https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;" target="_blank" rel="noopener">https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</a><br>:log info “DDNS Address is $address1”</p>
-</blockquote>
-<hr>
+            <h1 id="百米路由2（HQ55）U-boot启动流程"><a href="#百米路由2（HQ55）U-boot启动流程" class="headerlink" title="百米路由2（HQ55）U-boot启动流程"></a>百米路由2（HQ55）U-boot启动流程</h1><p>0x000000000000-0x000000040000 : “u-boot”<br>0x000000040000-0x000000050000 : “u-boot-env”<br>0x000000050000-0x000000690000 : “rootfs”<br>mtd: partition “rootfs” set to be root filesystem<br>split_squashfs: no squashfs found in “ath-nor0”<br>0x000000690000-0x0000007d0000 : “kernel”<br>0x0000007d0000-0x0000007e0000 : “cfg”<br>0x0000007e0000-0x0000007f0000 : “oem”<br>0x0000007f0000-0x000000800000 : “ART”<br>Kernel command line: board=bxo2000n_2s_lite console=ttyS0,115200 root=31:02 rootfstype=squashfs,jffs2 init=/sbin/init mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART) mem=64M<br>arg 1: board=bxo2000n_2s_lite<br>arg 2: console=ttyS0,115200<br>arg 3: root=31:02<br>arg 4: rootfstype=squashfs,jffs2<br>arg 5: init=/sbin/init<br>arg 6: mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART)<br>arg 7: mem=64M<br>CPU revision is: 0001974c (MIPS 74Kc)<br>ath_sys_frequency: cpu srif ddr srif cpu 535 ddr 400 ahb 200</p>
 
           
         
@@ -436,7 +429,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/百米路由2 u-boot驱动流程/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/RouterOS-freedns-动态域名更新/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -456,7 +449,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/06/百米路由2 u-boot驱动流程/" class="post-title-link" itemprop="url">Untitled</a>
+                <a href="/2019/06/06/RouterOS-freedns-动态域名更新/" class="post-title-link" itemprop="url">RouterOS  freedns 动态域名更新</a>
               
             
           </h1>
@@ -481,7 +474,7 @@
                 
               
 
-              <time title="Created: 2019-06-06 13:50:39 / Modified: 14:33:56" itemprop="dateCreated datePublished" datetime="2019-06-06T13:50:39+08:00">2019-06-06</time>
+              <time title="Created: 2019-06-06 14:58:04 / Modified: 15:21:29" itemprop="dateCreated datePublished" datetime="2019-06-06T14:58:04+08:00">2019-06-06</time>
             
 
             
@@ -522,7 +515,14 @@
       
         
           
-            <h1 id="百米路由2（HQ55）U-boot启动流程"><a href="#百米路由2（HQ55）U-boot启动流程" class="headerlink" title="百米路由2（HQ55）U-boot启动流程"></a>百米路由2（HQ55）U-boot启动流程</h1><p>0x000000000000-0x000000040000 : “u-boot”<br>0x000000040000-0x000000050000 : “u-boot-env”<br>0x000000050000-0x000000690000 : “rootfs”<br>mtd: partition “rootfs” set to be root filesystem<br>split_squashfs: no squashfs found in “ath-nor0”<br>0x000000690000-0x0000007d0000 : “kernel”<br>0x0000007d0000-0x0000007e0000 : “cfg”<br>0x0000007e0000-0x0000007f0000 : “oem”<br>0x0000007f0000-0x000000800000 : “ART”<br>Kernel command line: board=bxo2000n_2s_lite console=ttyS0,115200 root=31:02 rootfstype=squashfs,jffs2 init=/sbin/init mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART) mem=64M<br>arg 1: board=bxo2000n_2s_lite<br>arg 2: console=ttyS0,115200<br>arg 3: root=31:02<br>arg 4: rootfstype=squashfs,jffs2<br>arg 5: init=/sbin/init<br>arg 6: mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),6400k(rootfs),1280k(kernel),64k(cfg),64k(oem),64k(ART)<br>arg 7: mem=64M<br>CPU revision is: 0001974c (MIPS 74Kc)<br>ath_sys_frequency: cpu srif ddr srif cpu 535 ddr 400 ahb 200</p>
+            <p>1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
+<hr>
+<blockquote>
+<p>:global address [/ip address get [find interface=”pppoe-out1”] address]</p>
+<p>:global address1 [ :put [:pick $address 0 [:find $address “/“]]]</p>
+<p>/tool fetch keep-result=no url=”<a href="https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;" target="_blank" rel="noopener">https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</a><br>:log info “DDNS Address is $address1”</p>
+</blockquote>
+<hr>
 
           
         
