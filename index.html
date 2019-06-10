@@ -286,6 +286,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/两条命令将ubuntu自带源替换为阿里云/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Extunnel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/10/两条命令将ubuntu自带源替换为阿里云/" class="post-title-link" itemprop="url">两条命令将ubuntu自带源替换为阿里云</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-10 10:36:12 / Modified: 10:46:49" itemprop="dateCreated datePublished" datetime="2019-06-10T10:36:12+08:00">2019-06-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>经常在安装完系统后会出现运行apt-get update速度缓慢的问题，这里使用sed命令将原有的源替换为阿里云的源，以减少等待，具体操作如下；</p>
+<p>OS:Ubuntu16.04 LTS</p>
+<p>1.ssh 登录到目标主机后运行如下命令</p>
+<p>sudo sed ‘s/http://cn.archive.ubuntu.com/https://mirrors.aliyun.com/g’ /etc/apt/sources.list -i</p>
+<p>sudo sed ‘s/^#\ deb-src/deb-src/g’ /etc/apt/sources.list -i</p>
+<p>2.检查</p>
+<p>运行 sudo apt-get update<br><a href="https://i.loli.net/2019/06/10/5cfdc483a1cef18927.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/06/10/5cfdc483a1cef18927.png" alt="16825621-eb5fa55daa15e8ed.png"></a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/百米路由2（HQ55）U-boot启动流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -606,7 +755,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
