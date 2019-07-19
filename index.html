@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-07-19 13:53:13 / Modified: 14:07:22" itemprop="dateCreated datePublished" datetime="2019-07-19T13:53:13+08:00">2019-07-19</time>
+              <time title="Created: 2019-07-19 13:53:13 / Modified: 18:01:48" itemprop="dateCreated datePublished" datetime="2019-07-19T13:53:13+08:00">2019-07-19</time>
             
 
             
@@ -373,6 +373,33 @@
         
           
             <p>试用了很多下载工具，目前觉得比较ok的有FDM(Free Download Manager) 和 aria2，这里首先说FDM<br>1.Free Download Manager<br>主页:<a href="https://www.freedownloadmanager.org/zh/" target="_blank" rel="noopener"></a><br>特点：最主要的是完全免费，多线程下载、bt、断点续传、支持macOS和Windows两大系统，多语言支持。<br>缺点：目前在macOS上发现最大的问题就是限速没办法自定义<br><img src="https://i.loli.net/2019/07/19/5d315dd0a4ee699300.png" alt><br>2.aria2</p>
+<p>aira2 安装<br>brew install aria2</p>
+<p>配置</p>
+<p>mkdir ~/.aira2/aira2.conf<br>mkdir ~/.aria2<br>touch .aria2/aria2.conf</p>
+<p>`load-cookies=/Users/pbai/Downloads/cookies.txt<br>enable-rpc=true<br>rpc-secret=eawLBf3Jtj3YEWnoTbWqY<br>rpc-allow-origin-all=true<br>rpc-listen-all=true</p>
+<p>#event-poll=select</p>
+<p>#enable-mmap=false</p>
+<p>#file-allocation=falloc</p>
+<p>#min-split-size=16M</p>
+<p>#split=8</p>
+<p>#disk-cache=32M<br>dir=/Users/pbai/Downloads</p>
+<p>#continue=true</p>
+<p>#max-concurrent-downloads=16</p>
+<p>#max-connection-per-server=5</p>
+<p>#input-file=/Users/pbai/.aria2/aria2.session</p>
+<p>#save-session=/Users/pbai/.aria2/aria2.session</p>
+<p>#save-session-interval=60</p>
+<p>#log=/Users/pbai/.aria2/aria2.log</p>
+<p>#log-level=warn</p>
+<p>#listen-port=51413</p>
+<p>#enable-dht=true</p>
+<p>#enable-peer-exchange=true</p>
+<p>#user-agent=uTorrent/2210(25130)</p>
+<p>#peer-id-prefix=-UT2210-</p>
+<p>#seed-ratio=0</p>
+<p>#bt-seed-unverified=true</p>
+<p>#bt-save-metadata=true</p>
+<p>#check-certificate=false`</p>
 
           
         
