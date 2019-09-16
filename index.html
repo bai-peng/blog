@@ -286,6 +286,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/16/解决zoom会议软件无法登陆问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Extunnel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/16/解决zoom会议软件无法登陆问题/" class="post-title-link" itemprop="url">解决zoom会议软件无法登陆问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-09-16 09:58:21 / Modified: 10:25:52" itemprop="dateCreated datePublished" datetime="2019-09-16T09:58:21+08:00">2019-09-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="解决zoom-us-会议软件无法登陆问题"><a href="#解决zoom-us-会议软件无法登陆问题" class="headerlink" title="解决zoom.us 会议软件无法登陆问题"></a>解决zoom.us 会议软件无法登陆问题</h2><p>macos 下解决zoom无法使用的问题，编辑本机hosts文件即可解决。</p>
+<p>操作步骤: 打开terminal，粘贴以下内容,然后重新打开zoom就可以连接了，等待zoom服务恢复正常后删除下面的内容就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &quot;cat  &gt;&gt; /etc/hosts&quot; &lt;&lt; EOF</span><br><span class="line">221.122.88.132 www.zoom.us</span><br><span class="line">221.122.88.132 www3.zoom.us</span><br><span class="line">221.122.88.132 google.zoom.us</span><br><span class="line">221.122.88.132 facebook.zoom.us</span><br><span class="line">221.122.88.132 log.zoom.us</span><br><span class="line">221.122.88.132 api.zoom.us</span><br><span class="line">221.122.88.132 launcher.zoom.us</span><br><span class="line">221.122.88.132 imauth.zoom.us</span><br><span class="line">221.122.88.132 static.zoom.us</span><br><span class="line">52.202.62.249 images.zoom.us</span><br><span class="line">104.16.52.111 support.zoom.us</span><br><span class="line">221.122.88.134 async.zoom.us </span><br><span class="line">221.122.89.232 file-ia.zoom.us</span><br><span class="line">221.122.89.156 xmpp001.zoom.us</span><br><span class="line">221.122.89.156 xmpp002.zoom.us</span><br><span class="line">221.122.89.156 xmpp003.zoom.us</span><br><span class="line">221.122.89.156 xmpp004.zoom.us</span><br><span class="line">221.122.89.156 xmpp005.zoom.us</span><br><span class="line">221.122.89.156 xmpp006.zoom.us</span><br><span class="line">221.122.89.156 xmpp007.zoom.us</span><br><span class="line">221.122.89.156 xmpp008.zoom.us</span><br><span class="line">221.122.89.156 xmpp009.zoom.us</span><br><span class="line">221.122.89.156 xmpp010.zoom.us</span><br><span class="line">221.122.89.156 xmpp011.zoom.us</span><br><span class="line">221.122.89.156 xmpp012.zoom.us</span><br><span class="line">221.122.89.156 xmpp013.zoom.us</span><br><span class="line">221.122.89.156 xmpp014.zoom.us</span><br><span class="line">221.122.89.156 xmpp015.zoom.us</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<p>Windows 系统一样，将以上内容通过管理员权限使用记事本打开 C:\Windows\System32\drivers\etc\hosts 文件 粘贴以上内容保存即可。</p>
+<p>Windows 操作方式 ，</p>
+<p>点击Windows 开始按钮,输入 notepad ，然后右键在记图标上面右键点击 “以管理员身份打开”,<br><img src="https://i.loli.net/2019/09/16/mwkuPgU5Kxj7FVX.png" alt="图片 1.png"></p>
+<p>打开后的记事本中点击 菜单-打开命令，在文件名一栏输入<br>“C:\Windows\System32\drivers\etc\hosts” 然后点击打开将以上代码区的文件粘贴到尾部就可以解决zoom无法连接的问题了。</p>
+<p><img src="https://i.loli.net/2019/09/16/g28oMfOtiXrxBQc.jpg" alt="windows_hosts.jpg"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/24/100Mbps带宽一个月会占用多少流量/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1271,7 +1422,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
