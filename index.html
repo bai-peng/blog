@@ -286,6 +286,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/27/sql-server-express-自动化备份/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Extunnel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/12/27/sql-server-express-自动化备份/" class="post-title-link" itemprop="url">sql server express 自动化备份</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-12-27 16:16:38 / Modified: 17:46:47" itemprop="dateCreated datePublished" datetime="2019-12-27T16:16:38+08:00">2019-12-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##sql server express 自动化备份</p>
+<p>sql server express 自动化备份</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;由于SQL Server Express做为免费版很多功能都没有,自动备份数据库需要SQL Server Agent服务,但是免费版则没有Agent服务，所以这里使用计划任务+脚本的方式进行自动备份.</p>
+<p>备份思路：<br>1.创建数据库备份脚本<br>2.对于过期文件处理，保留30天备份，删除30天以前创建的文件<br>3.创建计划任务</p>
+<p>1.备份脚本内容如下</p>
+<p><code>GO 
+DECLARE 
+@backupTime VARCHAR(20)
+DECLARE 
+@fileName VARCHAR(1000)  
+SELECT
+ @backupTime=(CONVERT(VARCHAR(8), GETDATE(), 112) +REPLACE(CONVERT(VARCHAR(5), GETDATE(), 114), &#39;:&#39;, &#39;&#39;))  
+SELECT
+-- 这里的D:\Backup修改为自己实际备份的目标路径
+ @fileName=&#39;D:\Backup\DB_&#39;+@backupTime+&#39;.bak&#39;
+ -- 这里的DATABASE修改为需要备份的数据库名
+backup database DATABASE to disk=@fileName</code><br><br>以上在 SQL Server 2005 和 SQL Server 2012 下测试通过</p>
+<p>2.脚本文件，以下内容保存问autobackup.bat文件</p>
+<p><code>forfiles /P D:\Backup /M *.bak /D -30 /C &quot;cmd /c del /q @file&quot;
+sqlcmd -S . -i backup.sql</code></p>
+<p>3.创建windows计划任务，</p>
+<p>步骤如下：</p>
+<p>&nbsp;&nbsp;打开‘windows计划任务程序‘-创建基本任务,填写好任务名称，点击下一步，<br>触发器:默认值(每天),<br>任务开始时间,这里设置为2019-1-1 0:00,每天一次，<br>触发操作:    启动程序，在’程序或脚本‘后面的浏览按钮选择已经写好的autobackup.bat文件。</p>
+<p>在向导最后一步，勾单击完成即可。</p>
+<p>&nbsp;关于forfiles命令更多使用方法请<a href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/forfiles" target="_blank" rel="noopener">点击这里</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/16/解决zoom会议软件无法登陆问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -331,7 +498,7 @@
                 
               
 
-              <time title="Created: 2019-09-16 09:58:21 / Modified: 10:25:52" itemprop="dateCreated datePublished" datetime="2019-09-16T09:58:21+08:00">2019-09-16</time>
+              <time title="Created: 2019-09-16 09:58:21 / Modified: 10:24:18" itemprop="dateCreated datePublished" datetime="2019-09-16T09:58:21+08:00">2019-09-16</time>
             
 
             
@@ -821,7 +988,7 @@
                 
               
 
-              <time title="Created: 2019-06-18 10:55:25 / Modified: 13:38:05" itemprop="dateCreated datePublished" datetime="2019-06-18T10:55:25+08:00">2019-06-18</time>
+              <time title="Created: 2019-06-18 10:55:25 / Modified: 11:11:37" itemprop="dateCreated datePublished" datetime="2019-06-18T10:55:25+08:00">2019-06-18</time>
             
 
             
@@ -1422,7 +1589,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
