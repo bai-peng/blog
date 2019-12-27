@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-12-27 16:16:38 / Modified: 17:48:52" itemprop="dateCreated datePublished" datetime="2019-12-27T16:16:38+08:00">2019-12-27</time>
+              <time title="Created: 2019-12-27 16:16:38 / Modified: 17:49:48" itemprop="dateCreated datePublished" datetime="2019-12-27T16:16:38+08:00">2019-12-27</time>
             
 
             
@@ -372,14 +372,13 @@
       
         
           
-            <p>##sql server express 自动化备份</p>
-<p>sql server express 自动化备份</p>
+            <p>sql server express 自动化备份</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;由于SQL Server Express做为免费版很多功能都没有,自动备份数据库需要SQL Server Agent服务,但是免费版则没有Agent服务，所以这里使用计划任务+脚本的方式进行自动备份.</p>
 <p>备份思路：<br>1.创建数据库备份脚本<br>2.对于过期文件处理，保留30天备份，删除30天以前创建的文件<br>3.创建计划任务</p>
 <p>1.备份脚本内容如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">GO </span><br><span class="line">DECLARE </span><br><span class="line">@backupTime VARCHAR(20)</span><br><span class="line">DECLARE </span><br><span class="line">@fileName VARCHAR(1000)  </span><br><span class="line">SELECT</span><br><span class="line"> @backupTime=(CONVERT(VARCHAR(8), GETDATE(), 112) +REPLACE(CONVERT(VARCHAR(5), GETDATE(), 114), &apos;:&apos;, &apos;&apos;))  </span><br><span class="line">SELECT</span><br><span class="line">-- 这里的D:\Backup修改为自己实际备份的目标路径</span><br><span class="line"> @fileName=&apos;D:\Backup\DB_&apos;+@backupTime+&apos;.bak&apos;</span><br><span class="line"> -- 这里的DATABASE修改为需要备份的数据库名</span><br><span class="line">backup database DATABASE to disk=@fileName</span><br></pre></td></tr></table></figure>
 
-<p><br>以上在 SQL Server 2005 和 SQL Server 2012 下测试通过</p>
+<p><br> 以上在 SQL Server 2005 和 SQL Server 2012 下测试通过</p>
 <p>2.脚本文件，以下内容保存问autobackup.bat文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">forfiles /P D:\Backup /M *.bak /D -30 /C &quot;cmd /c del /q @file&quot;</span><br><span class="line">sqlcmd -S . -i backup.sql</span><br></pre></td></tr></table></figure>
 
