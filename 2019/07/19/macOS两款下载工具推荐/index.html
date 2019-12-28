@@ -105,7 +105,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2019/07/19/5d315dd0a4ee699300.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/23/lVMCA4poRmZbXeS.png">
-<meta property="og:updated_time" content="2019-12-28T03:58:49.338Z">
+<meta property="og:updated_time" content="2019-12-28T04:00:42.331Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS两款下载工具推荐">
 <meta name="twitter:description" content="试用了很多下载工具，目前觉得比较ok的有FDM(Free Download Manager) 和 aria2，这里首先说FDM1.Free Download Manager 主页: https://www.freedownloadmanager.org/zh/特点：最主要的是完全免费，多线程下载、bt、断点续传、支持macOS和Windows两大系统，多语言支持。缺点：目前在macOS上发现最大的">
@@ -352,7 +352,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-28 11:58:49" itemprop="dateModified" datetime="2019-12-28T11:58:49+08:00">2019-12-28</time>
+                <time title="Modified: 2019-12-28 12:00:42" itemprop="dateModified" datetime="2019-12-28T12:00:42+08:00">2019-12-28</time>
               
             
           </span>
@@ -389,38 +389,15 @@
         <p>试用了很多下载工具，目前觉得比较ok的有FDM(Free Download Manager) 和 aria2，这里首先说FDM<br>1.Free Download Manager</p>
 <p>主页: <a href="https://www.freedownloadmanager.org/zh/" target="_blank" rel="noopener">https://www.freedownloadmanager.org/zh/</a><br>特点：最主要的是完全免费，多线程下载、bt、断点续传、支持macOS和Windows两大系统，多语言支持。<br>缺点：目前在macOS上发现最大的问题就是限速没办法自定义</p>
 <p><img src="https://i.loli.net/2019/07/19/5d315dd0a4ee699300.png" alt><br>2.aria2</p>
-<p>aira2 安装</p>
-<figure class="highlight plain"><figcaption><span>install aria2```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">配置</span><br><span class="line"></span><br><span class="line">```mkdir ~/.aira2/aira2.conf</span><br></pre></td></tr></table></figure>
+<p>aira2 安装<br><code>brew install aria2</code></p>
+<p>配置</p>
+<p><code>mkdir ~/.aira2/aira2.conf</code><br><code>mkdir ~/.aria2</code><br><code>touch .aria2/aria2.conf</code><br><code>vi .aria2/aria2.conf</code></p>
+<p>写入以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#daemon=true</span><br><span class="line">load-cookies=/Users/pbai/Downloads/cookies.txt</span><br><span class="line">enable-rpc=true</span><br><span class="line">rpc-secret=eawLBf3Jtj3YEWn212sdd#oTbWqY11</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line">rpc-listen-all=true</span><br><span class="line">#event-poll=select</span><br><span class="line">#enable-mmap=false</span><br><span class="line">#file-allocation=falloc</span><br><span class="line">#min-split-size=16M</span><br><span class="line">#split=8</span><br><span class="line">#disk-cache=32M</span><br><span class="line">dir=/Users/pbai/Downloads</span><br><span class="line">#continue=true</span><br><span class="line">#max-concurrent-downloads=16</span><br><span class="line">#max-connection-per-server=5</span><br><span class="line">#input-file=/Users/pbai/.aria2/aria2.session</span><br><span class="line">#save-session=/Users/pbai/.aria2/aria2.session</span><br><span class="line">#save-session-interval=60</span><br><span class="line">#log=/Users/pbai/.aria2/aria2.log</span><br><span class="line">#log-level=warn</span><br><span class="line">#listen-port=51413</span><br><span class="line">#enable-dht=true</span><br><span class="line">#enable-peer-exchange=true</span><br><span class="line">#user-agent=uTorrent/2210(25130)</span><br><span class="line">#peer-id-prefix=-UT2210-</span><br><span class="line">#seed-ratio=0</span><br><span class="line">#bt-seed-unverified=true</span><br><span class="line">#bt-save-metadata=true</span><br><span class="line">#check-certificate=false</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><figcaption><span>~/.aria2```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```touch .aria2/aria2.conf</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><figcaption><span>.aria2/aria2.conf```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">写入以下内容</span><br></pre></td></tr></table></figure>
-
-<p>#daemon=true<br>load-cookies=/Users/pbai/Downloads/cookies.txt<br>enable-rpc=true<br>rpc-secret=eawLBf3Jtj3YEWn212sdd#oTbWqY11<br>rpc-allow-origin-all=true<br>rpc-listen-all=true</p>
-<p>#event-poll=select</p>
-<p>#enable-mmap=false</p>
-<p>#file-allocation=falloc</p>
-<p>#min-split-size=16M</p>
-<p>#split=8</p>
-<p>#disk-cache=32M<br>dir=/Users/pbai/Downloads</p>
-<p>#continue=true</p>
-<p>#max-concurrent-downloads=16</p>
-<p>#max-connection-per-server=5</p>
-<p>#input-file=/Users/pbai/.aria2/aria2.session</p>
-<p>#save-session=/Users/pbai/.aria2/aria2.session</p>
-<p>#save-session-interval=60</p>
-<p>#log=/Users/pbai/.aria2/aria2.log</p>
-<p>#log-level=warn</p>
-<p>#listen-port=51413</p>
-<p>#enable-dht=true</p>
-<p>#enable-peer-exchange=true</p>
-<p>#user-agent=uTorrent/2210(25130)</p>
-<p>#peer-id-prefix=-UT2210-</p>
-<p>#seed-ratio=0</p>
-<p>#bt-seed-unverified=true</p>
-<p>#bt-save-metadata=true</p>
-<p>#check-certificate=false</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.安装GUI插件</span><br><span class="line">本人习惯Chrome浏览器，这里就给Chrome 浏览器安装一个名为Aria2 for Chrome的插件</span><br><span class="line">插件下载地址:https://github.com/alexhua/Aria2-for-chrome</span><br><span class="line"></span><br><span class="line">插件安装成后编辑一个启动脚本start-aria2.sh</span><br><span class="line">vi start-aria2.sh</span><br><span class="line">```#!/bin/bash</span><br><span class="line">aria2c --conf-path=&quot;$HOME/.aria2/aria2.conf&quot; -D</span><br></pre></td></tr></table></figure>
+<p>3.安装GUI插件<br>本人习惯Chrome浏览器，这里就给Chrome 浏览器安装一个名为Aria2 for Chrome的插件<br>插件下载地址:<a href="https://github.com/alexhua/Aria2-for-chrome" target="_blank" rel="noopener">https://github.com/alexhua/Aria2-for-chrome</a></p>
+<p>插件安装成后编辑一个启动脚本start-aria2.sh<br>vi start-aria2.sh</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aria2c --conf-path=&quot;$HOME/.aria2/aria2.conf&quot; -D</span><br></pre></td></tr></table></figure>
 
 <p>添加执行权限</p>
 <p><code>chmod +x start-aria2.sh</code></p>
