@@ -1611,7 +1611,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-28 11:53:49" itemprop="dateModified" datetime="2019-12-28T11:53:49+08:00">2019-12-28</time>
+                <time title="Modified: 2019-12-28 11:55:11" itemprop="dateModified" datetime="2019-12-28T11:55:11+08:00">2019-12-28</time>
               
             
           </span>
@@ -1648,8 +1648,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
         
           
             <p>1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
-<p><code>:global address [/ip address get [find interface=&quot;pppoe-out1&quot;] address]</code><br><code>:global address1 [ :put [:pick $address 0 [:find $address &quot;/&quot;]]]</code><br><code>/tool fetch keep-result=no url=&quot;https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</code><br><code>:log info &quot;DDNS Address is $address1&quot;</code></p>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:global address [/ip address get [find interface=&quot;pppoe-out1&quot;] address]</span><br><span class="line">:global address1 [ :put [:pick $address 0 [:find $address &quot;/&quot;]]]</span><br><span class="line">/tool fetch keep-result=no url=&quot;https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</span><br><span class="line">:log info &quot;DDNS Address is $address1&quot;</span><br></pre></td></tr></table></figure>
           
         
       
