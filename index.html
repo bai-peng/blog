@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-12-28 11:26:34 / Modified: 11:35:58" itemprop="dateCreated datePublished" datetime="2019-12-28T11:26:34+08:00">2019-12-28</time>
+              <time title="Created: 2019-12-28 11:26:34 / Modified: 11:37:14" itemprop="dateCreated datePublished" datetime="2019-12-28T11:26:34+08:00">2019-12-28</time>
             
 
             
@@ -372,21 +372,18 @@
       
         
           
-            <p>#####1.下载</p>
-<p>主页地址：<a href="https://www.zabbix.com/download_agents" target="_blank" rel="noopener">https://www.zabbix.com/download_agents</a></p>
+            <h5 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h5><p>主页地址：<a href="https://www.zabbix.com/download_agents" target="_blank" rel="noopener">https://www.zabbix.com/download_agents</a></p>
 <p><code>cd /tmp
 curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg
 sudo installer -pkg zabbix_agent-4.0.16-macos-amd64-gnutls.pkg -target /</code></p>
 <p><code>sudo vi /usr/local/etc/zabbix/zabbix_agentd.conf</code></p>
-<p>#####2.修改配置文件<br><code>Server={SERVERIP}
+<h5 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2.修改配置文件"></a>2.修改配置文件</h5><p><code>Server={SERVERIP}
 ServerActive={SERVERIP}
 Hostname={hostname}</code></p>
-<p>#####3.开启/停止参数 </p>
-<p><code>sudo launchctl start com.zabbix.zabbix_agentd
+<h5 id="3-开启-停止参数"><a href="#3-开启-停止参数" class="headerlink" title="3.开启/停止参数"></a>3.开启/停止参数</h5><p><code>sudo launchctl start com.zabbix.zabbix_agentd
 sudo launchctl stop com.zabbix.zabbix_agentd</code></p>
 <p>注：主机执行 active checks 时， Zabbix agent 需要定义主机名字。 而且, agent端的主机名字必须和前端配置的主机名字 “Host name“完全匹配。</p>
-<p>#####4.Zabbix server 添加 zabbix agent</p>
-<p>1.点击 configuration - Hosts - “Create host”</p>
+<h5 id="4-Zabbix-server-添加-zabbix-agent"><a href="#4-Zabbix-server-添加-zabbix-agent" class="headerlink" title="4.Zabbix server 添加 zabbix agent"></a>4.Zabbix server 添加 zabbix agent</h5><p>1.点击 configuration - Hosts - “Create host”</p>
 <p>Groups:当前环境定义的组<br>Host name 填写 上面 /usr/local/etc/zabbix/zabbix_agentd.conf 中配置的”Hostname“<br>Agent interfaces ：上文中zabbix agent 的IP/DNS名称，注意这里 Connect to的选择；<br>Templates： “Template OS Mac OS X”<br>添加成功后如下；</p>
 <p><img src="https://i.loli.net/2019/12/28/C7aBVUwgmlXThs3.png" alt="zabbixagent.png"></p>
 
