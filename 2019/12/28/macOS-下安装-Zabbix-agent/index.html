@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg1sudo installer -pkg zabbix_agent-4.0.16-macos-amd6">
+  <meta name="description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkgsudo installer -pkg zabbix_agent-4.0.16-macos-amd64">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS 下安装 Zabbix agent">
 <meta property="og:url" content="http://yoursite.com/2019/12/28/macOS-下安装-Zabbix-agent/index.html">
 <meta property="og:site_name" content="Extunnel">
-<meta property="og:description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg1sudo installer -pkg zabbix_agent-4.0.16-macos-amd6">
+<meta property="og:description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkgsudo installer -pkg zabbix_agent-4.0.16-macos-amd64">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2019/12/28/C7aBVUwgmlXThs3.png">
-<meta property="og:updated_time" content="2019-12-28T03:41:22.447Z">
+<meta property="og:updated_time" content="2019-12-28T03:42:00.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS 下安装 Zabbix agent">
-<meta name="twitter:description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg1sudo installer -pkg zabbix_agent-4.0.16-macos-amd6">
+<meta name="twitter:description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkgsudo installer -pkg zabbix_agent-4.0.16-macos-amd64">
 <meta name="twitter:image" content="https://i.loli.net/2019/12/28/C7aBVUwgmlXThs3.png">
 
 
@@ -334,7 +334,7 @@
                 
               
 
-              <time title="Created: 2019-12-28 11:26:34 / Modified: 11:41:22" itemprop="dateCreated datePublished" datetime="2019-12-28T11:26:34+08:00">2019-12-28</time>
+              <time title="Created: 2019-12-28 11:26:34 / Modified: 11:42:00" itemprop="dateCreated datePublished" datetime="2019-12-28T11:26:34+08:00">2019-12-28</time>
             
 
             
@@ -375,7 +375,7 @@
       
         <h5 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h5><p>主页地址：<a href="https://www.zabbix.com/download_agents" target="_blank" rel="noopener">https://www.zabbix.com/download_agents</a></p>
 <p><code>cd /tmp
-curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg</code><br>1sudo installer -pkg zabbix_agent-4.0.16-macos-amd64-gnutls.pkg -target /<br>`</p>
+curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg</code><br><code>sudo installer -pkg zabbix_agent-4.0.16-macos-amd64-gnutls.pkg -target /</code></p>
 <p><code>sudo vi /usr/local/etc/zabbix/zabbix_agentd.conf</code></p>
 <h5 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2.修改配置文件"></a>2.修改配置文件</h5><p><code>Server={SERVERIP}</code><br><code>ServerActive={SERVERIP}</code><br><code>Hostname={hostname}</code></p>
 <h5 id="3-开启-停止参数"><a href="#3-开启-停止参数" class="headerlink" title="3.开启/停止参数"></a>3.开启/停止参数</h5><p><code>sudo launchctl start com.zabbix.zabbix_agentd</code><br><code>sudo launchctl stop com.zabbix.zabbix_agentd</code></p>
