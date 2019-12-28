@@ -286,6 +286,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/macOS-下安装-Zabbix-agent/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Extunnel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/12/28/macOS-下安装-Zabbix-agent/" class="post-title-link" itemprop="url">macOS 下安装 Zabbix agent</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-12-28 11:26:34 / Modified: 11:34:18" itemprop="dateCreated datePublished" datetime="2019-12-28T11:26:34+08:00">2019-12-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##macOS 下安装 Zabbix agent</p>
+<p>#####1.下载</p>
+<p>主页地址：<a href="https://www.zabbix.com/download_agents" target="_blank" rel="noopener">https://www.zabbix.com/download_agents</a></p>
+<p><code>cd /tmp
+curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg
+sudo installer -pkg zabbix_agent-4.0.16-macos-amd64-gnutls.pkg -target /</code></p>
+<p><code>sudo vi /usr/local/etc/zabbix/zabbix_agentd.conf</code></p>
+<p>#####2.修改配置文件<br><code>Server={SERVERIP}
+ServerActive={SERVERIP}
+Hostname={hostname}</code></p>
+<p>#####3.开启/停止参数 </p>
+<p><code>sudo launchctl start com.zabbix.zabbix_agentd
+sudo launchctl stop com.zabbix.zabbix_agentd</code></p>
+<p>注：主机执行 active checks 时， Zabbix agent 需要定义主机名字。 而且, agent端的主机名字必须和前端配置的主机名字 “Host name“完全匹配。</p>
+<p>#####4.Zabbix server 添加 zabbix agent</p>
+<p>1.点击 configuration - Hosts - “Create host”</p>
+<p>Groups:当前环境定义的组<br>Host name 填写 上面 /usr/local/etc/zabbix/zabbix_agentd.conf 中配置的”Hostname“<br>Agent interfaces ：上文中zabbix agent 的IP/DNS名称，注意这里 Connect to的选择；<br>Templates： “Template OS Mac OS X”<br>添加成功后如下；</p>
+<p><img src="https://i.loli.net/2019/12/28/C7aBVUwgmlXThs3.png" alt="zabbixagent.png"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/27/sql-server-express-自动化备份/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1579,7 +1739,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
