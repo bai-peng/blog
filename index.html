@@ -1296,7 +1296,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-18 13:36:41" itemprop="dateModified" datetime="2019-06-18T13:36:41+08:00">2019-06-18</time>
+                <time title="Modified: 2019-12-28 11:56:37" itemprop="dateModified" datetime="2019-12-28T11:56:37+08:00">2019-12-28</time>
               
             
           </span>
@@ -1335,7 +1335,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
             <p>经常在安装完系统后会出现运行apt-get update速度缓慢的问题，这里使用sed命令将原有的源替换为阿里云的源，以减少等待，具体操作如下；</p>
 <p>OS:Ubuntu16.04 LTS</p>
 <p>1.ssh 登录到目标主机后运行如下命令</p>
-<figure class="highlight plain"><figcaption><span>sed 's/http\:\/\/cn\.archive\.ubuntu\.com/https\:\/\/mirrors\.aliyun\.com/g'</span><a href="/etc/apt/sources.list">-i```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```sudo sed &apos;s/^#\ deb\-src/deb\-src/g&apos; /etc/apt/sources.list -i</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>sed 's/http\:\/\/cn\.archive\.ubuntu\.com/https\:\/\/mirrors\.aliyun\.com/g'</span><a href="/etc/apt/sources.list">-i</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed &apos;s/^#\ deb\-src/deb\-src/g&apos; /etc/apt/sources.list -i</span><br></pre></td></tr></table></figure>
 
 <p>2.检查</p>
 <p>运行<br><code>sudo apt-get update</code><br><img src="https://i.loli.net/2019/06/10/5cfdc483a1cef18927.png" alt="16825621-eb5fa55daa15e8ed.png"></p>
