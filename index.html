@@ -286,6 +286,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/12/解决macOS-10-15系统中向日葵远控无法被远程控制问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Extunnel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/02/12/解决macOS-10-15系统中向日葵远控无法被远程控制问题/" class="post-title-link" itemprop="url">解决macOS 10.15系统中向日葵远控无法被远程控制问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-02-12 22:40:16 / Modified: 22:40:36" itemprop="dateCreated datePublished" datetime="2020-02-12T22:40:16+08:00">2020-02-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="解决macOS-10-15系统中向日葵远控无法被远程控制问题"><a href="#解决macOS-10-15系统中向日葵远控无法被远程控制问题" class="headerlink" title="解决macOS 10.15系统中向日葵远控无法被远程控制问题"></a>解决macOS 10.15系统中向日葵远控无法被远程控制问题</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;在摒弃了”团队观察者“远程控制软件后,开始寻找可以内网穿透的远程控制软件，最终发现国产的向日葵不错，对免费用户支持友好，可以满足日常需求，但是从电脑系统升级到Catalina(10.15)后发现电脑在做为被控端的时候无法被远程控制，经过几分钟研究，最终发现”SunloginClient_Desktop“没有远程控制权限导致，特此照顾一下小白用户，在这里写一篇图文并茂的文档予以记录，希望可以帮助到其他人。</p>
+<p>######一.检查 ”屏幕录制“ 权限</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;打开 系统偏好设置-安全性与隐私-隐私,选择”屏幕录制,查看右侧app列表中是否有”向日葵“app，如果没有请自行添加，如下图所示；<br><img src="https://i.loli.net/2020/02/12/94rNniva5MIHRk6.jpg" alt="-w480"></p>
+<p>######二. 辅助功能(app远程控制权限)<br>&nbsp;&nbsp;&nbsp;&nbsp;1.点击左下方“➕”，按下“Command+Shift+G”组合键，在“前往文件夹”下方的路径输入</p>
+<p><code>/Applications/SunloginClient.app/Contents/Helpers/SunloginClient_Desktop</code></p>
+<p>然后点击前往,然后点击“打开”命令，</p>
+<p><img src="https://i.loli.net/2020/02/12/PR42Nfr1tV9hSQA.jpg" alt="-w480"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;确保”辅助功能“权限右侧的app列表中“SunloginClient_Desktop”处于打钩状态,如图，<br><img src="https://i.loli.net/2020/02/12/OHPoyfhtGjiCwvn.jpg" alt="-w400"></p>
+<p>以上操作完成后，重新打开向日葵远程控制软件即可解决受控端无法被控制的问题。</p>
+<h6 id="注-以上操作在macOS-10-15-3-系统下验证通过。"><a href="#注-以上操作在macOS-10-15-3-系统下验证通过。" class="headerlink" title="注:以上操作在macOS 10.15.3 系统下验证通过。"></a><em>注:以上操作在macOS 10.15.3 系统下验证通过。</em></h6>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/macOS-下安装-Zabbix-agent/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -458,7 +609,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/12/27/sql-server-express-自动化备份/" class="post-title-link" itemprop="url">sql server express 自动化备份</a>
+                <a href="/2019/12/27/sql-server-express-自动化备份/" class="post-title-link" itemprop="url">Untitled</a>
               
             
           </h1>
@@ -483,12 +634,24 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
                 
               
 
-              <time title="Created: 2019-12-27 16:16:38 / Modified: 17:49:48" itemprop="dateCreated datePublished" datetime="2019-12-27T16:16:38+08:00">2019-12-27</time>
+              <time title="Created: 2019-12-27 16:16:38" itemprop="dateCreated datePublished" datetime="2019-12-27T16:16:38+08:00">2019-12-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-12-31 14:19:44" itemprop="dateModified" datetime="2019-12-31T14:19:44+08:00">2019-12-31</time>
               
             
           </span>
@@ -524,21 +687,22 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
       
         
           
-            <p>sql server express 自动化备份</p>
+            <p>SQL Server Express 自动化备份</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;由于SQL Server Express做为免费版很多功能都没有,自动备份数据库需要SQL Server Agent服务,但是免费版则没有Agent服务，所以这里使用计划任务+脚本的方式进行自动备份.</p>
-<p>备份思路：<br>1.创建数据库备份脚本<br>2.对于过期文件处理，保留30天备份，删除30天以前创建的文件<br>3.创建计划任务</p>
+<p>备份思路：</p>
+<p>1.创建数据库备份脚本<br>2.对于过期文件处理，保留30天备份，删除30天以前创建的文件<br>3.创建计划任务</p>
 <p>1.备份脚本内容如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">GO </span><br><span class="line">DECLARE </span><br><span class="line">@backupTime VARCHAR(20)</span><br><span class="line">DECLARE </span><br><span class="line">@fileName VARCHAR(1000)  </span><br><span class="line">SELECT</span><br><span class="line"> @backupTime=(CONVERT(VARCHAR(8), GETDATE(), 112) +REPLACE(CONVERT(VARCHAR(5), GETDATE(), 114), &apos;:&apos;, &apos;&apos;))  </span><br><span class="line">SELECT</span><br><span class="line">-- 这里的D:\Backup修改为自己实际备份的目标路径</span><br><span class="line"> @fileName=&apos;D:\Backup\DB_&apos;+@backupTime+&apos;.bak&apos;</span><br><span class="line"> -- 这里的DATABASE修改为需要备份的数据库名</span><br><span class="line">backup database DATABASE to disk=@fileName</span><br></pre></td></tr></table></figure>
 
-<p><br> 以上在 SQL Server 2005 和 SQL Server 2012 下测试通过</p>
 <p>2.脚本文件，以下内容保存问autobackup.bat文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">forfiles /P D:\Backup /M *.bak /D -30 /C &quot;cmd /c del /q @file&quot;</span><br><span class="line">sqlcmd -S . -i backup.sql</span><br></pre></td></tr></table></figure>
 
 <p>3.创建windows计划任务，</p>
 <p>步骤如下：</p>
-<p>&nbsp;&nbsp;打开‘windows计划任务程序‘-创建基本任务,填写好任务名称，点击下一步，<br>触发器:默认值(每天),<br>任务开始时间,这里设置为2019-1-1 0:00,每天一次，<br>触发操作:    启动程序，在’程序或脚本‘后面的浏览按钮选择已经写好的autobackup.bat文件。</p>
+<p>&nbsp;&nbsp;打开‘Windows计划任务程序‘-创建基本任务,填写好任务名称，点击下一步，<br>触发器:默认值(每天),<br>任务开始时间,这里设置为2019-1-1 0:00,每天一次，<br>触发操作:    启动程序，在’程序或脚本‘后面的浏览按钮选择已经写好的autobackup.bat文件。</p>
 <p>在向导最后一步，勾单击完成即可。</p>
 <p>&nbsp;关于forfiles命令更多使用方法请<a href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/forfiles" target="_blank" rel="noopener">点击这里</a></p>
+<p><br> 注:以上在 SQL Server 2005 和 SQL Server 2012 下测试通过</p>
 
           
         
@@ -1074,6 +1238,161 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/18/RouterOS-freedns-动态域名更新/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Extunnel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/18/RouterOS-freedns-动态域名更新/" class="post-title-link" itemprop="url">Untitled</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-18 13:37:10" itemprop="dateCreated datePublished" datetime="2019-06-18T13:37:10+08:00">2019-06-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-01-06 10:46:25" itemprop="dateModified" datetime="2020-01-06T10:46:25+08:00">2020-01-06</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="RouterOS-freedns-动态域名更新"><a href="#RouterOS-freedns-动态域名更新" class="headerlink" title="RouterOS-freedns-动态域名更新"></a>RouterOS-freedns-动态域名更新</h1><p>1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:global address [/ip address get [find interface=&quot;pppoe-out1&quot;] address]</span><br><span class="line">:global address1 [ :put [:pick $address 0 [:find $address &quot;/&quot;]]]</span><br><span class="line">/tool fetch keep-result=no url=&quot;https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</span><br><span class="line">:log info &quot;DDNS Address is $address1&quot;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/18/QSDK编译/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1522,161 +1841,6 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/06/RouterOS-freedns-动态域名更新/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Extunnel">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/06/RouterOS-freedns-动态域名更新/" class="post-title-link" itemprop="url">RouterOS  freedns 动态域名更新</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-06-06 14:58:04" itemprop="dateCreated datePublished" datetime="2019-06-06T14:58:04+08:00">2019-06-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-12-28 11:55:11" itemprop="dateModified" datetime="2019-12-28T11:55:11+08:00">2019-12-28</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1.注册FreeDNS账户,申请域名,再DDNS页面获取ASCII API参数.<br>2.在RouterOS上调用两个变量,address 和 address1<br>3.通过 fetch 进行更新</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:global address [/ip address get [find interface=&quot;pppoe-out1&quot;] address]</span><br><span class="line">:global address1 [ :put [:pick $address 0 [:find $address &quot;/&quot;]]]</span><br><span class="line">/tool fetch keep-result=no url=&quot;https://freedns.afraid.org/dynamic/update.php\?d2tWZ3VzYndwOHN6dsssl12wVUTnpPb0g1OjE3NzgyODIz&amp;address=$address1&quot;</span><br><span class="line">:log info &quot;DDNS Address is $address1&quot;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1719,7 +1883,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1765,7 +1929,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
