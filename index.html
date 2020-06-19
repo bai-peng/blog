@@ -306,7 +306,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2020/06/19/macOS开启远程日志服务器/" class="post-title-link" itemprop="url">macOS开启远程日志服务器</a>
+                <a href="/2020/06/19/macOS开启远程日志服务器/" class="post-title-link" itemprop="url">Untitled</a>
               
             
           </h1>
@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2020-06-19 11:00:01 / Modified: 11:00:18" itemprop="dateCreated datePublished" datetime="2020-06-19T11:00:01+08:00">2020-06-19</time>
+              <time title="Created: 2020-06-19 11:00:01 / Modified: 11:13:05" itemprop="dateCreated datePublished" datetime="2020-06-19T11:00:01+08:00">2020-06-19</time>
             
 
             
@@ -376,10 +376,10 @@
 <p>打开 UDP 日志接收端口：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /System/Library/LaunchDaemons/</span><br><span class="line">sudo cp com.apple.syslogd.plist com.apple.syslogd.plist.bak</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener dict&quot; com.apple.syslogd.plist</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener:SockServiceName string syslog&quot; com.apple.syslogd.plist</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener:SockType string dgram&quot; com.apple.syslogd.plist</span><br><span class="line">sudo launchctl unload com.apple.syslogd.plist</span><br><span class="line">sudo launchctl load com.apple.syslogd.plist</span><br></pre></td></tr></table></figure>
 
-<p><img src="media/15924783439493/15924794796639.jpg" alt="-w1065"></p>
+<p><img src="https://i.loli.net/2020/06/19/Cns3gejcpbKltNx.jpg" alt="-w1065"></p>
 <p>查看 UDP 端口是否已经打开：</p>
 <p><code>sudo lsof -i :514 -P</code></p>
-<p><img src="media/15924783439493/15924794974858.jpg" alt="-w801"></p>
+<p><img src="https://i.loli.net/2020/06/19/jz82lvgMd1aSQRG.jpg" alt="-w801"></p>
 <p>配置</p>
 <p>编辑asl配置文件,推荐新建文件放到/etc/asl/ 目录下,</p>
 <p>首先，需要准确地找到远程主机发送过来消息，消息写在Host和Facility字段中。为此，运行命令<code>syslog -F raw</code>，从命令输出中查看输出格式最后进行过滤。这里查看下面的示例输出;</p>
