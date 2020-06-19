@@ -96,19 +96,20 @@
 
 
 
-  <meta name="description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkgsudo installer -pkg zabbix_agent-4.0.16-macos-amd64">
+  <meta name="description" content="macOS开启远程日志服务器在macOS中开启日志服务器，允许来自远端的日志消息打印到系统控制台,可执行如下操作： 打开 UDP 日志接收端口： 1234567cd /System/Library/LaunchDaemons/sudo cp com.apple.syslogd.plist com.apple.syslogd.plist.baksudo /usr/libexec/PlistBuddy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macOS 下安装 Zabbix agent">
-<meta property="og:url" content="http://yoursite.com/2019/12/28/macOS-下安装-Zabbix-agent/index.html">
+<meta property="og:title" content="macOS开启远程日志服务器">
+<meta property="og:url" content="http://yoursite.com/2020/06/19/macOS开启远程日志服务器/index.html">
 <meta property="og:site_name" content="Extunnel">
-<meta property="og:description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkgsudo installer -pkg zabbix_agent-4.0.16-macos-amd64">
+<meta property="og:description" content="macOS开启远程日志服务器在macOS中开启日志服务器，允许来自远端的日志消息打印到系统控制台,可执行如下操作： 打开 UDP 日志接收端口： 1234567cd /System/Library/LaunchDaemons/sudo cp com.apple.syslogd.plist com.apple.syslogd.plist.baksudo /usr/libexec/PlistBuddy">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.loli.net/2019/12/28/C7aBVUwgmlXThs3.png">
-<meta property="og:updated_time" content="2019-12-28T03:42:00.630Z">
+<meta property="og:image" content="http://yoursite.com/2020/06/19/macOS开启远程日志服务器/media/15924783439493/15924794796639.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/06/19/macOS开启远程日志服务器/media/15924783439493/15924794974858.jpg">
+<meta property="og:updated_time" content="2020-06-19T03:00:18.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="macOS 下安装 Zabbix agent">
-<meta name="twitter:description" content="1.下载主页地址：https://www.zabbix.com/download_agents cd /tmp curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkgsudo installer -pkg zabbix_agent-4.0.16-macos-amd64">
-<meta name="twitter:image" content="https://i.loli.net/2019/12/28/C7aBVUwgmlXThs3.png">
+<meta name="twitter:title" content="macOS开启远程日志服务器">
+<meta name="twitter:description" content="macOS开启远程日志服务器在macOS中开启日志服务器，允许来自远端的日志消息打印到系统控制台,可执行如下操作： 打开 UDP 日志接收端口： 1234567cd /System/Library/LaunchDaemons/sudo cp com.apple.syslogd.plist com.apple.syslogd.plist.baksudo /usr/libexec/PlistBuddy">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/19/macOS开启远程日志服务器/media/15924783439493/15924794796639.jpg">
 
 
 
@@ -116,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/12/28/macOS-下安装-Zabbix-agent/">
+  <link rel="canonical" href="http://yoursite.com/2020/06/19/macOS开启远程日志服务器/">
 
 
 
@@ -126,7 +127,7 @@
   };
 </script>
 
-  <title>macOS 下安装 Zabbix agent | Extunnel</title>
+  <title>macOS开启远程日志服务器 | Extunnel</title>
   
 
 
@@ -291,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/macOS-下安装-Zabbix-agent/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/19/macOS开启远程日志服务器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -308,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">macOS 下安装 Zabbix agent
+          <h1 class="post-title" itemprop="name headline">macOS开启远程日志服务器
 
               
             
@@ -334,7 +335,7 @@
                 
               
 
-              <time title="Created: 2019-12-28 11:26:34 / Modified: 11:42:00" itemprop="dateCreated datePublished" datetime="2019-12-28T11:26:34+08:00">2019-12-28</time>
+              <time title="Created: 2020-06-19 11:00:01 / Modified: 11:00:18" itemprop="dateCreated datePublished" datetime="2020-06-19T11:00:01+08:00">2020-06-19</time>
             
 
             
@@ -373,16 +374,27 @@
       
 
       
-        <h5 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h5><p>主页地址：<a href="https://www.zabbix.com/download_agents" target="_blank" rel="noopener">https://www.zabbix.com/download_agents</a></p>
-<p><code>cd /tmp
-curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd64-gnutls.pkg</code><br><code>sudo installer -pkg zabbix_agent-4.0.16-macos-amd64-gnutls.pkg -target /</code></p>
-<p><code>sudo vi /usr/local/etc/zabbix/zabbix_agentd.conf</code></p>
-<h5 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2.修改配置文件"></a>2.修改配置文件</h5><p><code>Server={SERVERIP}</code><br><code>ServerActive={SERVERIP}</code><br><code>Hostname={hostname}</code></p>
-<h5 id="3-开启-停止参数"><a href="#3-开启-停止参数" class="headerlink" title="3.开启/停止参数"></a>3.开启/停止参数</h5><p><code>sudo launchctl start com.zabbix.zabbix_agentd</code><br><code>sudo launchctl stop com.zabbix.zabbix_agentd</code></p>
-<p>注：主机执行 active checks 时， Zabbix agent 需要定义主机名字。 而且, agent端的主机名字必须和前端配置的主机名字 “Host name“完全匹配。</p>
-<h5 id="4-Zabbix-server-添加-zabbix-agent"><a href="#4-Zabbix-server-添加-zabbix-agent" class="headerlink" title="4.Zabbix server 添加 zabbix agent"></a>4.Zabbix server 添加 zabbix agent</h5><p>1.点击 configuration - Hosts - “Create host”</p>
-<p>Groups:当前环境定义的组<br>Host name 填写 上面 /usr/local/etc/zabbix/zabbix_agentd.conf 中配置的”Hostname“<br>Agent interfaces ：上文中zabbix agent 的IP/DNS名称，注意这里 Connect to的选择；<br>Templates： “Template OS Mac OS X”<br>添加成功后如下；</p>
-<p><img src="https://i.loli.net/2019/12/28/C7aBVUwgmlXThs3.png" alt="zabbixagent.png"></p>
+        <h1 id="macOS开启远程日志服务器"><a href="#macOS开启远程日志服务器" class="headerlink" title="macOS开启远程日志服务器"></a>macOS开启远程日志服务器</h1><p>在macOS中开启日志服务器，允许来自远端的日志消息打印到系统控制台,可执行如下操作：</p>
+<p>打开 UDP 日志接收端口：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /System/Library/LaunchDaemons/</span><br><span class="line">sudo cp com.apple.syslogd.plist com.apple.syslogd.plist.bak</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener dict&quot; com.apple.syslogd.plist</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener:SockServiceName string syslog&quot; com.apple.syslogd.plist</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener:SockType string dgram&quot; com.apple.syslogd.plist</span><br><span class="line">sudo launchctl unload com.apple.syslogd.plist</span><br><span class="line">sudo launchctl load com.apple.syslogd.plist</span><br></pre></td></tr></table></figure>
+
+<p><img src="media/15924783439493/15924794796639.jpg" alt="-w1065"></p>
+<p>查看 UDP 端口是否已经打开：</p>
+<p><code>sudo lsof -i :514 -P</code></p>
+<p><img src="media/15924783439493/15924794974858.jpg" alt="-w801"></p>
+<p>配置</p>
+<p>编辑asl配置文件,推荐新建文件放到/etc/asl/ 目录下,</p>
+<p>首先，需要准确地找到远程主机发送过来消息，消息写在Host和Facility字段中。为此，运行命令<code>syslog -F raw</code>，从命令输出中查看输出格式最后进行过滤。这里查看下面的示例输出;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ASLMessageID 115] [Time 1592480896] [TimeNanoSec 0] [Level 6] [PID 4294967125] [UID 4294964289] [GID 4294967294] [ReadGID 80] [Host MikroTik] [Sender router] [Facility local7] [Message user user1 logged out from 192.168.1.102 via telnet]</span><br></pre></td></tr></table></figure>
+
+<p>vi /etc/asl/Mikrotik</p>
+<p>添加如下内容；</p>
+<p><code>? [= Host MikroTik] [= Facility local7] file /var/log/Mikrotik.log</code></p>
+<p>需要说明的是,上面的[= Host MikroTik] [= Facility local7] 需要改成在<code>syslog -F raw</code>命令中输出的你的设备的Host和Facility,当然，也可以添加其他内容做为过滤。</p>
+<p>重启服务使配置生效.</p>
+<p><code>sudo launchctl unload /System/Library/LaunchDaemons/com.apple.syslogd.plist
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.syslogd.plist</code></p>
+<p>以上测试在macOS 10.15.5 下测试通过。</p>
 
       
     </div>
@@ -446,8 +458,8 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/27/sql-server-express-自动化备份/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2020/02/12/解决macOS-10-15系统中向日葵远控无法被远程控制问题/" rel="next" title="解决macOS 10.15系统中向日葵远控无法被远程控制问题">
+                <i class="fa fa-chevron-left"></i> 解决macOS 10.15系统中向日葵远控无法被远程控制问题
               </a>
             
           </div>
@@ -455,10 +467,6 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/12/解决macOS-10-15系统中向日葵远控无法被远程控制问题/" rel="prev" title="解决macOS 10.15系统中向日葵远控无法被远程控制问题">
-                解决macOS 10.15系统中向日葵远控无法被远程控制问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +577,7 @@ curl -O https://assets.zabbix.com/downloads/4.0.16/zabbix_agent-4.0.16-macos-amd
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-下载"><span class="nav-number">1.</span> <span class="nav-text">1.下载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-修改配置文件"><span class="nav-number">2.</span> <span class="nav-text">2.修改配置文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-开启-停止参数"><span class="nav-number">3.</span> <span class="nav-text">3.开启/停止参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-Zabbix-server-添加-zabbix-agent"><span class="nav-number">4.</span> <span class="nav-text">4.Zabbix server 添加 zabbix agent</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#macOS开启远程日志服务器"><span class="nav-number">1.</span> <span class="nav-text">macOS开启远程日志服务器</span></a></li></ol></div>
             
 
           </div>
