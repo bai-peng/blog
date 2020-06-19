@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/06/19/GnmabkSIXAdwDuO.jpg">
 <meta property="og:image" content="https://i.loli.net/2020/06/19/Cns3gejcpbKltNx.jpg">
 <meta property="og:image" content="https://i.loli.net/2020/06/19/jz82lvgMd1aSQRG.jpg">
-<meta property="og:updated_time" content="2020-06-19T09:54:28.817Z">
+<meta property="og:updated_time" content="2020-06-19T09:56:53.980Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Extunnel">
 <meta name="twitter:description" content="macOS开启远程日志服务器在macOS中开启日志服务器，接收来自内网设备的日志消息打印到系统控制台,首先需要关闭系统的SIP功能,SIP功能是macOS 10.11系统以后引入的一种新的系统保护机制，防止系统意外遭到破坏, ###关闭SIP(系统完整保护) 1.进入Recovery模式, 重启macOS,按下Command+R 直到出现系统进度条后松开组合键； 2.打开终端 选择“实用工具-终端">
@@ -337,7 +337,7 @@
                 
               
 
-              <time title="Created: 2020-06-19 11:00:01 / Modified: 17:54:28" itemprop="dateCreated datePublished" datetime="2020-06-19T11:00:01+08:00">2020-06-19</time>
+              <time title="Created: 2020-06-19 11:00:01 / Modified: 17:56:53" itemprop="dateCreated datePublished" datetime="2020-06-19T11:00:01+08:00">2020-06-19</time>
             
 
             
@@ -390,10 +390,10 @@
 <h3 id="打开-UDP-日志接收端口："><a href="#打开-UDP-日志接收端口：" class="headerlink" title="打开 UDP 日志接收端口："></a>打开 UDP 日志接收端口：</h3><p>输入以下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo mount +uw /</span><br><span class="line">cd /System/Library/LaunchDaemons/</span><br><span class="line">sudo cp com.apple.syslogd.plist com.apple.syslogd.plist.bak</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener dict&quot; com.apple.syslogd.plist</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener:SockServiceName string syslog&quot; com.apple.syslogd.plist</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;add :Sockets:NetworkListener:SockType string dgram&quot; com.apple.syslogd.plist</span><br><span class="line">sudo launchctl unload com.apple.syslogd.plist</span><br><span class="line">sudo launchctl load com.apple.syslogd.plist</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2020/06/19/Cns3gejcpbKltNx.jpg" alt="-w1065"></p>
+<p><img src="https://i.loli.net/2020/06/19/Cns3gejcpbKltNx.jpg" alt="-w720"></p>
 <h4 id="检查-UDP-端口状态："><a href="#检查-UDP-端口状态：" class="headerlink" title="检查 UDP 端口状态："></a>检查 UDP 端口状态：</h4><p>输入以下命令检查端口是否已经处于监听状态；</p>
 <p><code>sudo lsof -i :514 -P</code></p>
-<p><img src="https://i.loli.net/2020/06/19/jz82lvgMd1aSQRG.jpg" alt="-w801"></p>
+<p><img src="https://i.loli.net/2020/06/19/jz82lvgMd1aSQRG.jpg" alt="-w640"></p>
 <h3 id="日志过滤配置"><a href="#日志过滤配置" class="headerlink" title="日志过滤配置"></a>日志过滤配置</h3><p>编辑配置文件,推荐直接在/etc/asl/ 目录下新建一个配置文件,<br>vi /etc/asl/Mikrotik</p>
 <p>添加如下内容；</p>
 <p><code>? [= Host MikroTik] [= Facility local1] file /var/log/Mikrotik.log</code></p>
